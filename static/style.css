@@ -1,0 +1,181 @@
+/* General styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Body styling */
+body {
+    background: linear-gradient(135deg, #74EBD5, #ACB6E5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Chat container */
+.chat-container {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    transition: all 0.3s ease-in-out;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Hover effect */
+.chat-container:hover {
+    transform: scale(1.03);
+}
+
+/* Chatbox */
+.chat-box {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background: #f1f1f1;
+    border-radius: 10px;
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar styling */
+.chat-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-box::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background: #023106;
+    border-radius: 10px;
+}
+
+.chat-box::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+}
+
+/* Messages */
+.message {
+    padding: 12px 18px;
+    margin: 8px 0;
+    border-radius: 10px;
+    line-height: 1.5;
+    font-size: 14px;
+    word-wrap: break-word;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+/* User message */
+.user {
+    background: #007bff;
+    color: #fff;
+    text-align: right;
+    border-bottom-right-radius: 0;
+}
+
+/* Bot message */
+.bot {
+    background: #f8d7da;
+    color: #721c24;
+    text-align: left;
+    border-bottom-left-radius: 0;
+}
+
+/* Input and button */
+.input-container {
+    display: flex;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+/* Input field */
+input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+/* Input focus effect */
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Button */
+button {
+    padding: 12px 20px;
+    border: none;
+    background: #28a745;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Button hover */
+button:hover {
+    background: #218838;
+}
+
+/* Button active state */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .chat-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .chat-box {
+        height: 350px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    input {
+        font-size: 12px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
